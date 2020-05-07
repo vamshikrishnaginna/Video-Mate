@@ -15,3 +15,11 @@ before((done)=>{
     }
     );
 });
+
+
+beforeEach(done =>{
+    mongoose.connection.collections.students.drop(()=>{
+       console.log("dropped!")
+        done();
+    })
+})
