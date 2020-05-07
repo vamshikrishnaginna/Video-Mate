@@ -4,7 +4,7 @@ const assert = require('assert');
 describe("Read Tests", ()=> {
     let reader;
     beforeEach((done)=>{
-        reader = Student({name: "Reader"})
+        reader = new Student({name: "Reader"})
         reader.save().then(()=> {
             done();
         })
